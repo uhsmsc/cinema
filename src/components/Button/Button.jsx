@@ -1,8 +1,9 @@
 import './Button.css'
 
 function Button({children}) {
+
     return(
-        <button className="button">{children}</button>
+        <button onClick={() => {console.log('Клик');}} className="button">{children}</button>
     )
 }
 

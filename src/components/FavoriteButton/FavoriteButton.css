@@ -1,0 +1,13 @@
+.favorite-button {
+  background: none;
+  border: none;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #7b6ef6;
+}
