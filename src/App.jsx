@@ -4,8 +4,13 @@ import Paragraph from "./components/Paragraph/Paragraph";
 import Title from "./components/Title/Title";
 import Header from "./components/Header/Header";
 import Input from "./components/Input/Input";
+import Card from "./components/Card/Card";
 
 function App() {
+  const films = [
+    //{ image: "Black-widow.png", name: "Black Widow", stars: 324 },
+  ];
+
   return (
     <>
       <Header />
@@ -46,6 +51,25 @@ function App() {
           </Input>
           <Button>Искать</Button>
         </div>
+        {films.length === 0 ? (
+          <div className="cards-empty">
+            <Title>Упс... Ничего не найдено</Title>
+            <p className="cards-empty__subtitle">
+              Попробуйте изменить запрос или ввести более точное название фильма.
+            </p>
+          </div>
+        ) : (
+          <div className="cards-grid">
+            {films.map((film, index) => (
+              <Card
+                key={index}
+                image={film.image}
+                name={film.name}
+                stars={film.stars}
+              />
+            ))}
+          </div>
+        )}
       </main>
     </>
   );
